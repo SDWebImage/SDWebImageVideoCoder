@@ -27,11 +27,21 @@ This coder plugin, provide the animation loading support for video format, inclu
 
 ## Installation
 
+#### CocoaPods
+
 SDWebImageVideoCoder is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SDWebImageVideoCoder'
+```
+
+#### Carthage
+
+SDWebImageVideoCoder is available through [Carthage](https://github.com/Carthage/Carthage).
+
+```
+github "SDWebImage/SDWebImageVideoCoder"
 ```
 
 ## Usage
