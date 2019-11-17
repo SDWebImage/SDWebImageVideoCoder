@@ -1,6 +1,6 @@
 # SDWebImageVideoCoder
 
-[![CI Status](https://img.shields.io/travis/lizhuoli1126@126.com/SDWebImageVideoCoder.svg?style=flat)](https://travis-ci.org/lizhuoli1126@126.com/SDWebImageVideoCoder)
+[![CI Status](https://img.shields.io/travis/SDWebImage/SDWebImageVideoCoder.svg?style=flat)](https://travis-ci.org/SDWebImage/SDWebImageVideoCoder)
 [![Version](https://img.shields.io/cocoapods/v/SDWebImageVideoCoder.svg?style=flat)](https://cocoapods.org/pods/SDWebImageVideoCoder)
 [![License](https://img.shields.io/cocoapods/l/SDWebImageVideoCoder.svg?style=flat)](https://cocoapods.org/pods/SDWebImageVideoCoder)
 [![Platform](https://img.shields.io/cocoapods/p/SDWebImageVideoCoder.svg?style=flat)](https://cocoapods.org/pods/SDWebImageVideoCoder)
@@ -11,13 +11,13 @@ This is just a toy coder plugin for [SDWebImage](https://github.com/SDWebImage).
 
 **Important**: This project is just a toy, which means, it does not provide any production ready features, and the performances is really slow.
 
-For real world rendering for small video files (like [Imgur's GIFV format](https://help.imgur.com/hc/en-us/articles/208606616-What-is-GIFV-)). You should always prefers to use the video player and rendering components, like AVKit's [AVPlayerViewController](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) .
+For real world rendering for short video files (like [Imgur's GIFV format](https://help.imgur.com/hc/en-us/articles/208606616-What-is-GIFV-)). You should always prefers to use the video player and rendering components, like AVKit's [AVPlayerViewController](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) .
 
 This coder plugin, provide the animation loading support for video format, including:
 
 + MP4 (MPEG/4)
++ M4V (Apple iTunes Movie)
 + MOV (QuickTime Movie)
-+ AVI (Audio Video Interleave)
 
 ## Requirements
 
@@ -43,6 +43,9 @@ For coder plugin usage, see [Wiki - Coder Usage](https://github.com/SDWebImage/S
 + Objective-C
 
 ```objective-c
+// register coder
+[SDImageCodersManager.sharedCoder addCoder:SDImageVideoCoder.sharedCoder];
+// load URL
 SDAnimatedImageView *imageView;
 NSURL *videoURL = [NSURL URLWithString:@"https://i.imgur.com/FY1AbSo.mp4"]; 
 [imageView sd_setImageWithURL:videoURL];
@@ -51,6 +54,9 @@ NSURL *videoURL = [NSURL URLWithString:@"https://i.imgur.com/FY1AbSo.mp4"];
 + Swift
 
 ```swift
+// register coder
+SDImageCodersManager.shared.addCoder(SDImageVideoCoder.shared)
+// load URL
 let imageView: SDAnimatedImageView
 let url = URL(string: "https://i.imgur.com/FY1AbSo.mp4")
 imageView.sd_setImage(url: url)
@@ -69,7 +75,7 @@ AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWit
 generator.appliesPreferredTrackTransform = YES;
 generator.requestedTimeToleranceBefore = kCMTimeZero;
 generator.requestedTimeToleranceAfter = kCMTimeZero;
-// Player
+// player
 SDAnimatedImagePlayer *player = [SDAnimatedImagePlayer playerWithProvider:generator];
 player.animationFrameHandler = ^(NSUInteger index, UIImage * frame) {
     // frames
@@ -101,7 +107,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 <img src="https://raw.githubusercontent.com/SDWebImage/SDWebImageVideoCoder/master/Example/Screenshot/MP4Demo.png" width="600" />
 
-These MP4 video is from [Imgur](https://imgur.com/).
+This demo MP4 video is from [Imgur](https://imgur.com/). You can always try you short video files as well.
 
 ## Author
 
