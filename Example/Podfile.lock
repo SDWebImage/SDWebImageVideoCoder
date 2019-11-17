@@ -1,0 +1,25 @@
+PODS:
+  - SDWebImage (5.3.1):
+    - SDWebImage/Core (= 5.3.1)
+  - SDWebImage/Core (5.3.1)
+  - SDWebImageVideoCoder (0.1.0):
+    - SDWebImage (~> 5.3)
+
+DEPENDENCIES:
+  - SDWebImageVideoCoder (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  SDWebImageVideoCoder:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
+  SDWebImageVideoCoder: e60bfc97d644f6fafe3f16c3eafc4c626d55e962
+
+PODFILE CHECKSUM: f74263dcdd6f9f9df152726d6934aca467cf2b39
+
+COCOAPODS: 1.8.4
