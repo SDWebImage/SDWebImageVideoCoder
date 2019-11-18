@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SDWebImageVideoCoder'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SDWebImageVideoCoder.'
+  s.summary          = 'A toy (non-production) SDWebImage coder plugin to play Video Format like MP4 on Animated Image View'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This is just a toy coder plugin for SDWebImage. Which aim to provide a demo usage that how SDWeImage combined the Animated Image View and Player and let it works for generic usage and customization.
                        DESC
 
   s.homepage         = 'https://github.com/SDWebImage/SDWebImageVideoCoder'
