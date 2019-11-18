@@ -13,6 +13,7 @@
 #endif
 
 #define AVDataAssetClass @"AVDataAsset"
+#define AVDataAssetMaxLength 1048576
 @protocol AVDataAssetProtocol <NSObject>
 
 - (instancetype)initWithData:(NSData *)data contentType:(AVFileType)type;
@@ -34,7 +35,8 @@
     
     AVAsset *asset;
     Class cls = NSClassFromString(AVDataAssetClass);
-    if (type.length > 0 && [cls instancesRespondToSelector:@selector(initWithData:contentType:)]) {
+    if ([cls instancesRespondToSelector:@selector(initWithData:contentType:)] && data.length < AVDataAssetMaxLength && type.length > 0) {
+        // Prefer Data Asset if available
         asset = [[cls alloc] initWithData:data contentType:type];
     } else {
         // Random file name
@@ -48,7 +50,6 @@
         NSURL *fileURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:fileName]];
         [data writeToURL:fileURL atomically:NO];
         asset = [[AVURLAsset alloc] initWithURL:fileURL options:nil];
-        [NSFileManager.defaultManager removeItemAtURL:fileURL error:nil];
     }
     if (!asset) {
         return nil;
