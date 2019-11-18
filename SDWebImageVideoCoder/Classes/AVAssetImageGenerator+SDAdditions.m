@@ -22,7 +22,6 @@
 @interface AVAssetImageGenerator ()
 
 @property (nonatomic, strong) NSData *sd_videoData;
-@property (nonatomic, assign) NSTimeInterval sd_framePerSecond;
 
 @end
 

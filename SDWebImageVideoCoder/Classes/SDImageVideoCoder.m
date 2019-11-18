@@ -26,6 +26,15 @@
     return coder;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.maxFramePerSecond = 10;
+        self.maxFrameSize = CGSizeZero;
+    }
+    return self;
+}
+
 #pragma mark - Helper
 
 - (AVFileType)videoContentTypeWithData:(NSData *)data {
@@ -78,7 +87,7 @@
 #pragma mark - SDAnimatedImageCoder
 
 - (nullable instancetype)initWithAnimatedImageData:(nullable NSData *)data options:(nullable SDImageCoderOptions *)options {
-    self = [super init];
+    self = [self init];
     if (self) {
         if (!data) {
             return nil;
@@ -88,6 +97,10 @@
         if (!generator) {
             return nil;
         }
+        if (generator.sd_framePerSecond > self.maxFramePerSecond) {
+            generator.sd_framePerSecond = self.maxFramePerSecond;
+        }
+        generator.maximumSize = self.maxFrameSize;
         self.generator = generator;
     }
     return self;
