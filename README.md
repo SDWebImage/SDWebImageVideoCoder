@@ -7,7 +7,7 @@
 
 ## What's for
 
-This is just a toy coder plugin for [SDWebImage](https://github.com/SDWebImage). Which aim to provide a demo usage that how SDWeImage combined the Animated Image View and Player and let it works for generic usage and customization.
+This is just a toy coder plugin for [SDWebImage](https://github.com/SDWebImage). Which aim to provide a demo usage that how SDWebImage combined the Animated Image View and Player and let it works for generic usage and customization.
 
 **Important**: This project is just a toy, which means, it does not provide any production ready features, and the performances is really slow.
 
