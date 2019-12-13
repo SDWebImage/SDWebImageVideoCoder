@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SDWebImageVideoCoder'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A toy (non-production) SDWebImage coder plugin to play Video Format like MP4 on Animated Image View'
 
 # This description is used to generate tags and improve search results.
