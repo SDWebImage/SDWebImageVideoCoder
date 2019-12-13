@@ -6,7 +6,11 @@
 * file that was distributed with this source code.
 */
 
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
 @import SDWebImage;
+#endif
 
 /// A coder plugin which can play Video format, such as MP4/MOV.
 /// For normal image, it generate the poster thumb image of video.

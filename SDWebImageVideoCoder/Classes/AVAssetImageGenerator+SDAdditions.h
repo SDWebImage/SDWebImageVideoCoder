@@ -6,8 +6,12 @@
 * file that was distributed with this source code.
 */
 
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
 @import SDWebImage;
-@import AVFoundation;
+#endif
+#import <AVFoundation/AVFoundation.h>
 
 @interface AVAssetImageGenerator (SDAdditions) <SDAnimatedImageProvider>
 

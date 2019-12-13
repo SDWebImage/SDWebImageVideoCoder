@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		324AC22123812D860065C9BF /* AVAssetImageGenerator+SDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 324AC21C23812D860065C9BF /* AVAssetImageGenerator+SDAdditions.m */; };
 		324AC22323812D860065C9BF /* AVAssetImageGenerator+SDAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 324AC21E23812D860065C9BF /* AVAssetImageGenerator+SDAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		324AC22E23812DA20065C9BF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 324AC22C23812DA20065C9BF /* Info.plist */; };
 		324AC22F23812DA20065C9BF /* SDWebImageVideoCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 324AC22D23812DA20065C9BF /* SDWebImageVideoCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		324AC23223812DE20065C9BF /* SDImageVideoCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 324AC23023812DE20065C9BF /* SDImageVideoCoder.m */; };
 		324AC23323812DE20065C9BF /* SDImageVideoCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 324AC23123812DE20065C9BF /* SDImageVideoCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -266,7 +265,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324AC22E23812DA20065C9BF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
