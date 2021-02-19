@@ -21,8 +21,8 @@ This coder plugin, provide the animation loading support for video format, inclu
 
 ## Requirements
 
-+ iOS 8+
-+ macOS 10.10+
++ iOS 9+
++ macOS 10.11+
 + tvOS 9+
 
 ## Installation
@@ -42,6 +42,18 @@ SDWebImageVideoCoder is available through [Carthage](https://github.com/Carthage
 
 ```
 github "SDWebImage/SDWebImageVideoCoder"
+```
+
+#### Swift Package Manager (Xcode 11+)
+
+SDWebImageVideoCoder is available through [Swift Package Manager](https://swift.org/package-manager).
+
+```swift
+let package = Package(
+    dependencies: [
+        .package(url: "https://github.com/SDWebImage/SDWebImageVideoCoder.git", from: "0.2.0")
+    ]
+)
 ```
 
 ## Usage
