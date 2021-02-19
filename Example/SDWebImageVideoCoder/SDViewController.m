@@ -27,7 +27,7 @@
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:self.imageView];
     
-    NSURL *gifvURL = [NSURL URLWithString:@"https://imgur.com/download/NL1CXAF/LEGO+my+pizza"];
+    NSURL *gifvURL = [NSURL URLWithString:@"https://i.imgur.com/FY1AbSo.mp4"];
     
     [self.imageView sd_setImageWithURL:gifvURL completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         if (image) {
