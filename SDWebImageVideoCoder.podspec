@@ -26,10 +26,10 @@ This is just a toy coder plugin for SDWebImage. Which aim to provide a demo usag
   s.author           = { 'DreamPiggy' => 'lizhuoli1126@126.com' }
   s.source           = { :git => 'https://github.com/SDWebImage/SDWebImageVideoCoder.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
+  s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.11'
   s.tvos.deployment_target = '9.0'
 
   s.source_files = 'SDWebImageVideoCoder/Classes/**/*', 'SDWebImageVideoCoder/Module/SDWebImageVideoCoder.h'
-  s.dependency 'SDWebImage', '~> 5.3'
+  s.dependency 'SDWebImage', '~> 5.10'
 end
