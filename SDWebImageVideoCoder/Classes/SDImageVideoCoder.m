@@ -46,7 +46,8 @@
         // MPEG4
         NSString *testString = [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(4, 8)] encoding:NSASCIIStringEncoding];
         if ([testString isEqualToString:@"ftypMSNV"]
-            || [testString isEqualToString:@"ftypisom"]) {
+            || [testString isEqualToString:@"ftypisom"]
+            || [testString isEqualToString:@"ftypiso5"]) {
             return AVFileTypeMPEG4;
         }
         // M4V
